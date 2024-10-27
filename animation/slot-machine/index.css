@@ -1,0 +1,146 @@
+.wrap {
+  position: relative;
+  margin-top: 200px;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin: 150px auto 0;
+  
+  &.view {
+    overflow: visible;
+    .list {
+      transform: rotateY(45deg);
+    }
+  }
+  }
+.list {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  margin:0;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  animation-iteration-count: 1;
+   animation-fill-mode: both;
+  
+  &.rolling{
+   animation-name: rotate1;
+  }
+  &.rolling2{
+   animation-name: rotate2;
+  }
+  &.rolling3{
+    animation : rotate3 2s infinite linear;
+  }
+}
+.item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  list-style: none;
+  height: 50px;
+  width: 50px;
+  background-color: skyblue;
+  transform-origin: 50% 50%;
+  }
+
+
+
+
+//51
+
+.item {
+  &:nth-child(1) {
+    transform: rotateX(0)  translateZ(52px);
+  }
+  &:nth-child(2) {
+    transform: rotateX(51deg) translateZ(52px);
+  }
+  &:nth-child(3) {
+    transform: rotateX(102deg) translateZ(52px);
+  }
+  &:nth-child(4) {
+    transform: rotateX(154deg) translateZ(52px);
+  }
+  &:nth-child(5) {
+    transform: rotateX(205deg) translateZ(52px);
+  }
+  &:nth-child(6) {
+    transform: rotateX(257deg) translateZ(52px);
+  }
+  &:nth-child(7) {
+    transform: rotateX(308deg) translateZ(52px);
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%{
+    transform: rotateX(-1380deg);
+  }
+  70%{
+    transform: rotateX(-1420deg);
+  }
+  90%{
+    transform: rotateX(-1435deg);
+  }
+  100% {
+    transform: rotateX(-1440deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(51deg);
+  }
+  50%{
+    transform: rotateX(-1229deg);
+  }
+  70%{
+    transform: rotateX(-1333deg);
+  }
+  90%{
+    transform: rotateX(-1348deg);
+  }
+  100% {
+    transform: rotateX(-1388deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-1440deg);
+  }
+}
+
+
+
+.imoji {
+  display: block;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  padding-left: 60px;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.btn_wrap {
+  margin: 20px auto;
+  width: 200px;
+}
